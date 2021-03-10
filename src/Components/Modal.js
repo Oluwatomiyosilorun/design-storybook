@@ -1,10 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import { typeScale } from '../utils'
 import { Illustrations } from '../assets'
 import { useSpring, animated, config} from 'react-spring'
 import { PrimaryButton } from './Buttons'
-
+import ComponentA from './componentA'
+import ComponentB from './componentB'
 
 const ModalWrapper = styled.div`
     width: 600px;
@@ -20,29 +21,31 @@ const ModalWrapper = styled.div`
     border-radius: 2px;
 `
 
-const SignUpHeader = styled.h3`
-    font-size: ${typeScale.header3};
-`
-
-const SignUpText = styled.p`
-    font-size: ${typeScale.paragraph};
-    max-width: 70%;
-    text-align: center;
-`
-
 export const SignUpModal = ({showModal, setShowModal}) => {
+    const [active , setActive] = useState("one");
+   
+    let showPage;
     const animation = useSpring({
         opacity: showModal ? 1 : 0,
         transform: showModal ? `transitionY(0)` : `transitionX(-200%)`
     });
+
+
+    switch(active) {
+        case "one":
+           showPage = <ComponentA setActive={setActive} />
+          break;
+        case "two":
+          showPage = <ComponentB setActive={setActive} />
+          break;
+        default:
+         showPage = <ComponentA />
+      }
     
     return (
         <animated.div style={animation}>
             <ModalWrapper>
-                <img src={Illustrations.SignUp} alt = "Sign up for an account" aria-hidden="true" style={{maxWidth:'380px'}}/>
-                <SignUpHeader>Sign Up</SignUpHeader>
-                <SignUpText>Sign up today to get access to all of our content and features!</SignUpText>
-                <PrimaryButton>Sign Up!</PrimaryButton>
+                {showPage}
             </ModalWrapper>
         </animated.div>
     )
