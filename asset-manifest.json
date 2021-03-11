@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/design-storybook/static/js/main.84a8ac1e.chunk.js",
+    "main.js.map": "/design-storybook/static/js/main.84a8ac1e.chunk.js.map",
+    "runtime-main.js": "/design-storybook/static/js/runtime-main.e03161f2.js",
+    "runtime-main.js.map": "/design-storybook/static/js/runtime-main.e03161f2.js.map",
+    "static/js/2.8855341c.chunk.js": "/design-storybook/static/js/2.8855341c.chunk.js",
+    "static/js/2.8855341c.chunk.js.map": "/design-storybook/static/js/2.8855341c.chunk.js.map",
+    "index.html": "/design-storybook/index.html",
+    "static/js/2.8855341c.chunk.js.LICENSE.txt": "/design-storybook/static/js/2.8855341c.chunk.js.LICENSE.txt",
+    "static/media/sign-up.e712854c.svg": "/design-storybook/static/media/sign-up.e712854c.svg",
+    "static/media/sign_up.65ff83d8.svg": "/design-storybook/static/media/sign_up.65ff83d8.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e03161f2.js",
+    "static/js/2.8855341c.chunk.js",
+    "static/js/main.84a8ac1e.chunk.js"
+  ]
+}
