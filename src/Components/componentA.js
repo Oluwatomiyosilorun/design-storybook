@@ -24,7 +24,7 @@ function componentA(props) {
     return (
         <>
         <img src={Illustrations.SignUp} alt = "Sign up for an account" aria-hidden="true" style={{maxWidth:'380px'}}/>
-            <SignUpHeader>Page One</SignUpHeader>
+            <SignUpHeader>Sign Up</SignUpHeader>
             <SignUpText>Sign up today to get access to all of our content and features!</SignUpText>
             <PrimaryButton onClick={(e) => clickme(e)}>Sign Up!</PrimaryButton>
     </>
